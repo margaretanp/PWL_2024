@@ -1,9 +1,28 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PhotoController;
 
-Route::get('/user/{name?}', function ($name='John') {
-    return 'Nama saya '.$name;
-    });
+Route::resource('photos', PhotoController::class);
+
+// use App\Http\Controllers\HomeController;
+// use App\Http\Controllers\AboutController;
+// use App\Http\Controllers\ArticleController;
+
+// Route::get('/', HomeController::class);
+// Route::get('/about', AboutController::class);
+// Route::get('/articles/{id}', ArticleController::class);
+
+// use App\Http\Controllers\PageController;
+
+// Route::get('/', [PageController::class, 'index']); 
+// Route::get('/about', [PageController::class, 'about']); 
+// Route::get('/articles/{id}', [PageController::class, 'articles']); 
+
+// Route::get('/hello', [WelcomeController::class, 'hello']);
+
+// Route::get('/user/{name?}', function ($name='John') {
+//     return 'Nama saya '.$name;
+//     });
     
 // Route::get('/user/{name?}', function ($name=null) {
 //     return 'Nama saya '.$name;
